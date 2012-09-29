@@ -2,7 +2,7 @@ body {
   padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size:100%;
-  background-image: url(/images/bg.gif);
+  background-image: url(images/bg.gif);
 }
 
 .content {
@@ -16,15 +16,11 @@ body {
     width:50%;
 }
 
-#myimg { 
-    max-width: 485px;
-}
-
-#myimg img {
-   -webkit-border-radius: 5px 15px 5px 15px; 
+#myimg {
+    -webkit-border-radius: 5px 15px 5px 15px; 
     -moz-border-radius: 5px 15px 5px 15px; 
     border-radius: 5px 15px 5px 15px;
-    
+    max-width: 440px;
 }
 
 #mydesc {
