@@ -5,7 +5,7 @@ body {
   background-image: url(images/bg.gif);
 }
 
-.content {
+#mydesc {
   white-space: pre;
 }
 
@@ -20,7 +20,7 @@ body {
     -webkit-border-radius: 5px 15px 5px 15px; 
     -moz-border-radius: 5px 15px 5px 15px; 
     border-radius: 5px 15px 5px 15px;
-    max-width: 440px;
+    min-width: 400px;
 }
 
 #mydesc {

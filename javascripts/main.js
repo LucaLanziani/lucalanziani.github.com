@@ -9,7 +9,7 @@
   })
 
   var Meview = Backbone.View.extend({
-    el: $('.content'),
+    el: $('#myplace'),
     template: $('#me').template(),
   
     render: function () {
