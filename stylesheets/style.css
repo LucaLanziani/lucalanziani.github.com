@@ -1,0 +1,36 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size:100%;
+  background-image: url(/images/bg.gif);
+}
+
+.content {
+  white-space: pre;
+}
+
+.left {
+    float: left;
+    margin-left: 1em;
+    margin-right: 1em;
+    width:50%;
+}
+
+#myimg { 
+    max-width: 485px;
+}
+
+#myimg img {
+   -webkit-border-radius: 5px 15px 5px 15px; 
+    -moz-border-radius: 5px 15px 5px 15px; 
+    border-radius: 5px 15px 5px 15px;
+    
+}
+
+#mydesc {
+    font-size: 1.2em;
+}
+
+a {
+  color: #00B7FF;
+}

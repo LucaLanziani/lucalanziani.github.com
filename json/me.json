@@ -1,0 +1,24 @@
+{
+    "image": "/images/me.jpg"
+  , "desc": {
+        "name": "Luca"
+      , "surname": "Lanziani"
+      , "profession": "Software Engineer"
+      , "location": "Italy"
+      , "birthday": "##/##/1983"
+      , "nickname": "Nss"
+      , "twitter": "@_Nss_"
+      , "urls": [
+            "about.me/lucalanziani"
+          , "http://bit.ly/MeOnGplus"
+        ]
+      , "bio": [
+            "Linux addicted"
+          , "software programmer"
+          , "NewTech hunter"
+          , "hacker as bit.ly/hacker_def"
+          , "passionate traveler"
+          , "newbie on Startup's world... quick learner ;)"
+        ]
+    }
+}
