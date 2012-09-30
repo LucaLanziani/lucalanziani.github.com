@@ -2,7 +2,7 @@ body {
   padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size:100%;
-  background-image: url(images/bg.gif);
+  background-image: url(../images/bg.gif);
 }
 
 #mydesc {
@@ -30,3 +30,4 @@ body {
 a {
   color: #00B7FF;
 }
+
