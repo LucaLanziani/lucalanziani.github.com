@@ -18,7 +18,7 @@
       var attr = this.model.attributes
         , data = {
             image: attr.image,
-            desc:JSON.stringify(attr.desc, null, 8)
+            desc:JSON.stringify(attr.desc, null, 4)
           }
         ;
     

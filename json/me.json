@@ -1,5 +1,5 @@
 {
-    "image": "images/me.jpg"
+  "image": "images/me.jpg"
   , "desc": {
         "name": "Luca"
       , "surname": "Lanziani"
@@ -14,11 +14,12 @@
         ]
       , "bio": [
             "Linux addicted"
-          , "software programmer"
+          , "Software programmer"
           , "NewTech hunter"
-          , "hacker as bit.ly/hacker_def"
-          , "passionate traveler"
-          , "newbie on Startup's world... quick learner ;)"
+          , "Hacker as bit.ly/hacker_def"
+          , "Passionate traveler"
+          , "Newbie on Startup's world"
+          , "Quick learner ;)"
         ]
-      }
+  }
 }
