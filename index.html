@@ -1,58 +1,115 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi, I'm Luca</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href='stylesheets/style.css'>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Site Title</title>
+
+  <meta name="viewport" content="width=device-width">
+
+    <!-- Stylesheets -->
+  <link rel="stylesheet" href="/stylesheets/app.css">
+  
+  <!-- Live Reload -->
+  <script>
+    window.brunch = window.brunch || {};
+    window.brunch['auto-reload'] = {enabled: true};
+  </script>
+
+  <!-- Scripts -->
+  <script src="/javascripts/vendor.js"></script>
+
+  <script src="/javascripts/templates.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <script>require('initialize');</script>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css">
 </head>
 <body>
-    <div class='container'>
-      <div class="page-header">
+  <div class="container">
+    <div class="page-header">
         <h1>Hi, I'm Luca Lanziani <small>this is my personal page</small></h1>
-      </div>
-
-      <div id="myplace" class="row-fluid"></div>
     </div>
+    <div class="row"> 
+      
+    </div>
+    <div class="row" id='me'>
+        <div class='span4 offset1'>
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="images/me.jpg" alt="">
+                  <h4>Me in 155 characters</h4>
+                  <p>Linux addicted, Software Engineer, NewTech hunter, hacker as http://bit.ly/hacker_def , passionate traveler, newbie on Startup's world... quick learner ;)</p>
+                </div>
+              </li>
+            </ul>
+        </div>
+        <div class='span7'>
+          
+          <h3>Summary</h3>
+          <div class="row"> 
+            <div class="span7">
+              <p class="lead">
+                  After many years of pascal/java/C/ruby backend hacking I discovered the fascinating world of web programming, starting from RoR, I arrived to NodeJs on July 2011. I love startups and their way to always approach new challenges. 
+              </p>
+            </div>
+          </div>
 
+          <h3>Social</h3>
+          <div class="row">
+            <div class="span6">
+              <p>
+                <a href="https://twitter.com/_Nss_" class="sb twitter">@_Nss_</a>
+                <a href="https://www.facebook.com/luca.lanziani" class="sb facebook">Luca Lanziani</a>
+                <a href="http://it.linkedin.com/in/lucalanziani/" class="sb linkedin">LinkedIn</a>
+                <a href="https://plus.google.com/u/0/109095752675897506610/posts" class="sb gplus">Google+</a>
+              </p>
+            </div>
+          </div>
 
+          <h3>Experience</h3>
 
-
-<script type="text/template" id="me">
-<div class="span6">
-
-<div class="row">
-  <div class="span12">
-      <img class="img-circle" src="${image}">
-  </div> 
+          <div class="row">
+            <div class="span7">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>What</th>
+                    <th>When</th>
+                    <th>Where</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Software Engineer (Python project)</td>
+                    <td>04/2012 - Now</td>
+                    <td><a target="_black" href="http://www.filerock.com">FileRock</a></td>
+                  </tr>
+                  <tr>
+                    <td>Co-Founder (Co-Dreamer)</td>
+                    <td>08/2011 - 01/2012</td>
+                    <td>Grapily (Startup)</td>
+                  </tr>
+                  <tr>
+                    <td>Software Engineer (C project)</td>
+                    <td>01/2011 - 07/2011</td>
+                    <td><a target="_black" href="http://didattica.dia.uniroma3.it/">Università degli Studi Roma Tre</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="page-header"></div>
+    </div>
 </div>
-
-<div class="row">
-  <div class="span12">
-    <p></p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="span12">
-
-  </div>
-</div>
-</div>
-
-<div id="mydesc" class="span6 lead">
-${desc}
-</div>
-</script>
-
 </body>
-  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-  <script type="text/javascript" src='http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js'></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src='./javascripts/libs/underscore-min.js'></script>
-  <script type="text/javascript" src='./javascripts/libs/backbone-min.js'></script>
-  <script type="text/javascript" src='./javascripts/main.js'></script>
 </html>
