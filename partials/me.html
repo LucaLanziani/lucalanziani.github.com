@@ -1,0 +1,226 @@
+<div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+<!--           <div class="row">
+            <div class="col-sm-12"> -->
+              <div class="panel panel-default panel-primary"> 
+                 <div class="panel-heading"><strong>Summary</strong></div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <img style="margin-left: auto; margin-right: auto;" 
+                             src="img/me.jpg" 
+                             alt="my face" 
+                             class="img-rounded img-responsive">
+                      </div>
+                      <div class="col-xs-8">
+                        <p>I began developing software at the age of 14 using Pascal and fell in love with Linux at the age of 18.
+                        </p>
+                        <p>
+                        I got my master degree in Computer Engineering in 2010, from these studies I learned how to approach problems academically but I never forget to use a pinch of creativity.
+                        </p>
+                      </div>  
+                    </div>        
+                  </div>
+              </div>
+<!--             </div>
+          </div> -->
+
+<!--           <div class="row">
+            <div class="col-sm-12"> -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Social</strong>
+                </div>
+                <div class="panel-body">
+<!--                     <a data-ng-repeat="(social, data) in me.data.Socials" 
+                       data-ng-href="{{data.url}}"
+                       target="_blank"
+                       class="btn btn-primary margins-top-bottom">
+                       <i data-ng-class="data.icon" class="icon-large"></i>
+                         <small> {{social}}</small>
+
+                    </a> -->
+                    <a data-ng-repeat="(socialName, data) in me.data.Socials"
+                       class="btn btn-primary margins-2" 
+                       data-ng-href="{{data.url}}"
+                       target="_blank">
+                      <i data-ng-class="data.icon" 
+                        class="icon-large"> 
+                      </i>
+                      <small>{{socialName}}</small>
+                    </a>
+                </div>
+              </div>
+            
+            </div>
+<!--           </div>
+        </div> -->
+
+        <div class="col-sm-6">         
+          <!-- <div class="row">
+            <div class="col-sm-12"> -->
+              
+              <div class="panel panel-default panel-primary">
+                <div class="panel-heading"><strong>Experiences</strong> - <small><em>click to read more</em></small></div>
+                <div class="panel-body">
+                  <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Software Engineer <small>at</small> FileRock <span class="pull-right visible-md visible-lg"><small style="white-space:nowrap;">04/2012 - 07/2013</small></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>FileRock is a secure, backup and synchronization service. I mainly worked on the client [1], a multi-platform software that encrypt and sync data in the cloud completely written in python.
+                          </p><p>
+                          In the last months I worked on a new web interface completely written in HTML5 and Javascript as a single page application (SPA), using Angularjs framework. I used PhoneGap framework to bring this implementation on mobile devices.
+                          </p><p>
+                          [1] https://github.com/Nss/FileRock-Client
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Co-Dreamer <small>at</small> Grapily <span class="pull-right visible-md visible-lg"><small style="white-space:nowrap;">05/2011 - 01/2012</small></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>
+                          Grapily was a web platform to write HTML5 applications, focusing on your own skills. 
+                          </p>
+                          <p>
+                          In our vision, in the near future, every application will run in a browser with a composition of API and HTML5 Interface. Grapily wants to give a way to compose, fast and simply, this kind of applications.
+                          </p>
+                          <p>
+                          Hoping to create something by myself, I stopped too early by a series of "problems". Every fail, is a lesson. This experience introduced me to HTML5, Javascript (client-side/ server-side), startups world, team building...</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Software Engineer <small>at</small> Roma Tre University <span class="pull-right visible-md visible-lg"><small style="white-space:nowrap;">01/2011 - 07/2011</small></span>
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>
+                          I designed and developed a software in C language, on a linux embedded platform (FOX Board G20) for the SAETTA project, that takes care of dynamically-load software modules and manage the communication between them.
+                          </p><p>
+                          The software aims to centralize the communication and standardize the concept of module and data, providing a set of APIs that make it easier to develop.
+                          </p><p>
+                          SAETTA is the main project in the robotic lab of the Roma Tre University, it aims to develop a robotic swarm able to execute tasks of scientific interest.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                            Vice President <small>at</small> Tulug <span class="pull-right visible-md visible-lg"><small style="white-space:nowrap;">10/2006 - 05/2011</small></span>
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>
+                          Linux User Group or Linux Users' Group (LUG) is a private, generally non-profit or not-for-profit organization that provides support and/or education for Linux users.
+                          </p><p>
+                          Tulug organizes many events every year and we have been meeting since 2006 every week for spread our knowledge and help inexperienced users.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+<!--             </div>
+          </div> -->
+
+          <!-- <div class="row">
+            <div class="col-sm-12"> -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Skills &amp; Expertise</strong>
+                </div>
+                <div class="panel-body">
+                  <span class="label-success label margins-1">
+                    Nodejs
+                  </span>
+                  <span  class="label-success label margins-1">
+                    Angularjs
+                  </span>
+                  <span class="label-success label margins-1">
+                    Backbonejs 
+                  </span>
+                  <span class="label-success label margins-1">
+                    RoR
+                  </span>
+                  <span class="label-default label margins-1">
+                    Python           
+                  </span>
+                  <span class="label-default label margins-1">
+                    Javascript
+                  </span>
+                  <span class="label-default label margins-1">
+                    C
+                  </span>
+                  <span class="label-default label margins-1">
+                    Java
+                  </span>
+                  <span class="label-default label margins-1">
+                    Ruby
+                  </span>
+                  <span class="label-default label margins-1">
+                    Erlang
+                  </span>
+                  <span class="label-default label margins-1">
+                    Ocaml
+                  </span>
+                  <span class="label-default label margins-1">
+                    Pascal
+                  </span>
+                  <span class="label-info label margins-1">
+                    Linux
+                  </span>
+                  <span class="label-info label-success label margins-1">
+                    Osx
+                  </span>
+                  <span class="label-info label-success label margins-1">
+                    Windows
+                  </span>
+                  <span class="label-warning label margins-1">
+                    git
+                  </span>
+                  <span class="label-warning label margins-1">
+                    svn                      
+                  </span>
+                  <!-- <span data-ng-repeat="(skillType, data) in me.data.Skills">
+                    <span data-ng-repeat="skill in data.list"  >
+                      <span data-ng-class="data.color" class="label margins-1">
+                        {{skill}}
+                      </span>
+                    </span>
+                  </span> -->
+                </div>
+              </div>
+
+<!--             </div>
+          </div> -->
+            </div>
+
+        </div>
+      </div>
+    </div>

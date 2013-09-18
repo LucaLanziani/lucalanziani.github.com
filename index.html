@@ -1,115 +1,38 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  
-  <title>Site Title</title>
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title ng-bind-template="{{pageTitle}}"></title>
+    <link rel="stylesheet" href="/css/app.css"><!--[if lte IE 7]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script><![endif]--><!--[if lte IE 8]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <script>
+      window.brunch = window.brunch || {};
+      window.brunch['auto-reload'] = {
+        enabled: true
+      };
+    </script>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js"></script>
+    <style type="text/css">
+      body {
+        background-image: url('image/bg.gif');
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
 
-  <meta name="viewport" content="width=device-width">
-
-    <!-- Stylesheets -->
-  <link rel="stylesheet" href="/stylesheets/app.css">
-  
-  <!-- Live Reload -->
-  <script>
-    window.brunch = window.brunch || {};
-    window.brunch['auto-reload'] = {enabled: true};
-  </script>
-
-  <!-- Scripts -->
-  <script src="/javascripts/vendor.js"></script>
-
-  <script src="/javascripts/templates.js"></script>
-  <script src="/javascripts/app.js"></script>
-  <script>require('initialize');</script>
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css">
-</head>
-<body style="background-image: url('images/bg.gif');">
-  <div class="container">
-    <div class="page-header">
-        <h1>Hi, I'm Luca Lanziani <small>this is my personal page</small></h1>
+      <div class="page-header">
+        <h2>Luca Lanziani <small>Software Engineer</small></h2>
+      </div>
     </div>
-    <div class="row"> 
-      
-    </div>
-    <div class="row" id='me'>
-        <div class='span4 offset1'>
-            <ul class="thumbnails">
-              <li class="span4">
-                <div class="thumbnail">
-                  <img src="images/me.jpg" alt="">
-                  <h4>Me in 155 characters</h4>
-                  <p>Linux addicted, Software Engineer, NewTech hunter, hacker as http://bit.ly/hacker_def , passionate traveler, newbie on Startup's world... quick learner ;)</p>
-                </div>
-              </li>
-            </ul>
-        </div>
-        <div class='span7'>
-          
-          <h3>Summary</h3>
-          <div class="row"> 
-            <div class="span7">
-              <p class="lead">
-                  After many years of pascal/java/C/ruby backend hacking I discovered the fascinating world of web programming, starting from RoR, I arrived to NodeJs on July 2011. I love startups and their way to always approach new challenges. 
-              </p>
-            </div>
-          </div>
-
-          <h3>Social</h3>
-          <div class="row">
-            <div class="span6">
-              <p>
-                <a href="https://twitter.com/_Nss_" class="sb twitter">@_Nss_</a>
-                <a href="https://www.facebook.com/luca.lanziani" class="sb facebook">Luca Lanziani</a>
-                <a href="http://it.linkedin.com/in/lucalanziani/" class="sb linkedin">LinkedIn</a>
-                <a href="https://plus.google.com/u/0/109095752675897506610/posts" class="sb gplus">Google+</a>
-              </p>
-            </div>
-          </div>
-
-          <h3>Experience</h3>
-
-          <div class="row">
-            <div class="span7">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>What</th>
-                    <th>When</th>
-                    <th>Where</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Software Engineer (Python project)</td>
-                    <td>04/2012 - Now</td>
-                    <td><a target="_black" href="http://www.filerock.com">FileRock</a></td>
-                  </tr>
-                  <tr>
-                    <td>Co-Founder (Co-Dreamer)</td>
-                    <td>05/2011 - 01/2012</td>
-                    <td>Grapily (Startup)</td>
-                  </tr>
-                  <tr>
-                    <td>Software Engineer (C project)</td>
-                    <td>01/2011 - 07/2011</td>
-                    <td><a target="_black" href="http://didattica.dia.uniroma3.it/">Università degli Studi Roma Tre</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="page-header"></div>
-    </div>
-</div>
-</body>
+    <div data-ng-view></div>
+  </body>
 </html>
