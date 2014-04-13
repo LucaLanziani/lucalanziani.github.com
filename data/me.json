@@ -1,0 +1,55 @@
+{
+    "name": "Luca",
+    "surname": "Lanziani",
+    "role": "Software Engineer",
+    "img": "img/me.jpg",
+    "_description": "data/description.md",
+    "skills": [
+        {
+            "type": "Os",
+            "color":"info",
+            "list":["Linux","Osx","Windows"]
+        }, {
+            "type": "Languages",
+            "color":"default",
+            "list":["Python", "Javascript", "C", "Java", "Ruby", "Erlang", "Ocaml", "Pascal"]
+        }, {
+            "type": "Frameworks",
+            "color":"success",
+            "list": ["Nodejs", "Angularjs", "Backbonejs", "RoR", "Struts2", "JPA"]
+        }, {
+            "type": "Versioning",
+            "color":"warning",
+            "list": ["git", "svn"]
+        }
+    ],
+    "socials": [
+        {
+            "name": "Twitter",
+            "icon": "fa-twitter-square",
+            "url" : "https://twitter.com/_Nss_"
+        },{
+            "name": "Facebook",
+            "icon": "fa-facebook-square",
+            "url" : "https://www.facebook.com/luca.lanziani"
+        }, {
+            "name": "Linkedin",
+            "icon": "fa-linkedin-square",
+            "url" : "http://it.linkedin.com/in/lucalanziani/"
+
+        }, {
+            "name": "Google+",
+            "icon": "fa-google-plus-square",
+            "url" : "https://plus.google.com/u/0/109095752675897506610/posts"
+
+        }, {
+            "name": "Github",
+            "icon": "fa-github-square",
+            "url" : "https://www.github.com/Nss"
+        }, {
+            "name": "Email",
+            "icon": "fa-envelope",
+            "url" : "mailto:luca.lanziani+site@gmail.com"
+        }
+    ]
+}

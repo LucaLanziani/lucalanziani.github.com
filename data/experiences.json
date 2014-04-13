@@ -1,0 +1,35 @@
+[
+    {
+        "role": "Software Engineer",
+        "company": "Smarkets",
+        "link": "https://www.smarkets.com",
+        "from": [2012, 11],
+        "to": [],
+        "_description":"data/experiences/smarkets.md"
+
+    },{
+        "role": "Software Engineer",
+        "company": "FileRock",
+        "from": [2012, 4],
+        "to": [2013, 7],
+        "_description":"data/experiences/filerock.md"
+    },{
+        "role": "Co-Dreamer",
+        "company": "Grapily",
+        "from": [2011, 5],
+        "to": [2012, 1],
+        "_description":"data/experiences/grapily.md"
+    },{
+        "role": "Software Engineer",
+        "company": "Roma Tre University",
+        "from": [2011, 1],
+        "to": [2011, 7],
+        "_description":"data/experiences/roma_tre.md"
+    }, {
+        "role": "Vice President",
+        "company": "Tulug",
+        "from": [2006, 1],
+        "to": [2011, 5],
+        "_description":"data/experiences/tulug.md"
+    }
+]
