@@ -1,7 +1,7 @@
 var attr = DS.attr;
 
 App = Ember.Application.create();
-showdown = new Showdown.converter()
+showdown = new Showdown.converter();
 
 var getParams = function (param) {
     return function (element) {
@@ -12,7 +12,7 @@ var getParams = function (param) {
                 return element;
             });
     }
-}
+};
 
 var getDescriptions = function (param) {
     return function (experiences) {
@@ -21,7 +21,7 @@ var getDescriptions = function (param) {
             return result;
         });
     }
-}
+};
 
 var getInfo = function () {
     return Ember.$.getJSON('data/me.json')
@@ -29,7 +29,7 @@ var getInfo = function () {
             .then(function (result) {
                 return result;
             });
-}
+};
 
 var getExperiences = function () {
     return Ember.$.getJSON('data/experiences.json')
@@ -49,7 +49,7 @@ Ember.Handlebars.helper('format-date', function (date) {
 
 Ember.Handlebars.helper('duration', function (startDate, endDate) {
     return moment.duration(moment(endDate).diff(startDate))
-})
+});
 
 Ember.Handlebars.helper('format-markdown', function (input) {
     return new Handlebars.SafeString(showdown.makeHtml(input));
@@ -58,13 +58,13 @@ Ember.Handlebars.helper('format-markdown', function (input) {
 
 App.Router.map(function () {
     this.resource('me');
-})
+});
 
 App.IndexRoute = Ember.Route.extend({
     beforeModel: function() {
         this.transitionTo('me');
     }
-})
+});
 
 App.MeRoute = Ember.Route.extend({
     model: function () {
@@ -78,13 +78,19 @@ App.MeRoute = Ember.Route.extend({
                     return hash;
                 });
     }
-})
+});
 
-App.Router.reopen({
-  notifyGoogleAnalytics: function() {
-    return ga('send', 'pageview', {
-        'page': this.get('url'),
-        'title': this.get('url')
-      });
-  }.on('didTransition')
+App.ApplicationController = Ember.Controller.extend({
+  currentPathChanged: function() {
+    var page;
+
+    Ember.run.next(function() {
+      if (!Ember.isNone(_gaq)) {
+        page = window.location.hash.length > 0 ?
+               window.location.hash.substring(1) :
+               window.location.pathname;
+        _gaq.push(['_trackPageview', page]);
+      }
+    });
+  }.observes('currentPath')
 });
