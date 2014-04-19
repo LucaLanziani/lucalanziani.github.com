@@ -80,19 +80,11 @@ App.MeRoute = Ember.Route.extend({
     }
 })
 
-
-//App.Router.map(function() {
-//     this.resource('me', function() {
-//       this.resource('experiences'); // This will be foo.bar.baz
-//     });
-// });
-
-
-// App.MeRoute = Ember.Route.extend({
-//      model: getMe
-// });
-
-// App.ExperiencesRoute = Ember.Route.extend({
-//     model: getExperiences;
-// })
-
+App.Router.reopen({
+  notifyGoogleAnalytics: function() {
+    return ga('send', 'pageview', {
+        'page': this.get('url'),
+        'title': this.get('url')
+      });
+  }.on('didTransition')
+});
