@@ -1,0 +1,33 @@
+{
+    "name": "Luca",
+    "surname": "Lanziani",
+    "role": "Software Engineer",
+    "img": "img/me.jpg",
+    "socials": [ 
+        {
+            "name": "Github",
+            "icon": "fa-github-square",
+            "url" : "https://www.github.com/Nss"
+        },{
+            "name": "Linkedin",
+            "icon": "fa-linkedin-square",
+            "url" : "http://uk.linkedin.com/in/lucalanziani/"
+        },{
+            "name": "Twitter",
+            "icon": "fa-twitter-square",
+            "url" : "https://twitter.com/_Nss_"
+        },{
+            "name": "Facebook",
+            "icon": "fa-facebook-square",
+            "url" : "https://www.facebook.com/luca.lanziani"
+        },{
+            "name": "Google+",
+            "icon": "fa-google-plus-square",
+            "url" : "https://plus.google.com/u/0/109095752675897506610/posts"
+        },{
+            "name": "Email",
+            "icon": "fa-envelope-square",
+            "url" : "mailto:luca.lanziani+site@gmail.com"
+        }
+    ]
+}

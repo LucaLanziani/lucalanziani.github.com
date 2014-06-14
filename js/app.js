@@ -1,7 +1,25 @@
 var attr = DS.attr;
 
+
+
 App = Ember.Application.create();
+// App.Store = DS.Store.extend();
 showdown = new Showdown.converter();
+
+  
+function loadTemplate(url, name, callback) {
+  var contents = $.get(url, function(templateText) {
+    var compiledTemplate = Ember.Handlebars.compile(templateText);
+    if (name) {
+      Ember.TEMPLATES[name] = compiledTemplate
+    } else {
+      Ember.View.create({ template: compiledTemplate }).append();
+    }
+    if (callback) {
+      callback();
+    }
+  });
+}
 
 var getParams = function (param) {
     return function (element) {
@@ -17,15 +35,16 @@ var getParams = function (param) {
 var getDescriptions = function (param) {
     return function (experiences) {
         var promises = experiences.map(getParams(param));
-        return Ember.RSVP.all(promises).then(function (result) {
+        return Ember.RSVP
+        .all(promises)
+        .then(function (result) {
             return result;
         });
     }
 };
 
-var getInfo = function () {
-    return Ember.$.getJSON('data/me.json')
-            .then(getParams('description'))
+var getMe = function () {
+    return Ember.$.getJSON('data/base.json')
             .then(function (result) {
                 return result;
             });
@@ -57,20 +76,33 @@ Ember.Handlebars.helper('format-markdown', function (input) {
 
 
 App.Router.map(function () {
-    this.resource('me');
+    // this.route('socials', { path: "/*" });
+    this.route('me', { path: "/me"}, function () {
+        this.resource('experiences', { path: "/experiences"});  
+        this.resource('about', {path:"/about"});      
+    });
 });
 
 App.IndexRoute = Ember.Route.extend({
     beforeModel: function() {
-        this.transitionTo('me');
+        this.transitionTo('about');
     }
 });
+
+App.AboutRoute = Ember.Route.extend({
+    model: function () {
+        return Ember.$.getJSON('data/about.json')
+            .then(getParams('description'))
+            .then(function (about) {
+                return about
+            })
+    }
+})
 
 App.MeRoute = Ember.Route.extend({
     model: function () {
         var promises = {
-            'info': getInfo(),
-            'experiences': getExperiences()
+            'info': getMe()
         }
 
         return Ember.RSVP.hash(promises)
@@ -78,6 +110,45 @@ App.MeRoute = Ember.Route.extend({
                     return hash;
                 });
     }
+});
+
+App.ExperiencesRoute = Ember.Route.extend({
+    model: function () {
+        return getExperiences();
+    }
+});
+
+// App.SocialsRoute = Ember.Route.extend({
+//     model: function () {
+//         Ember.$.getJSON('data/base.json')
+//                 .then(function (base) {
+//                     console.log(base);
+//                     return base;
+//                 });
+//     },
+
+//     renderTemplate: function () {
+//         var controller = this.controllerFor('socials');
+
+//         this.render('socials', {
+//             outlet: 'socials',
+//             controller: controller
+//         })
+//     }
+// });
+
+
+App.ApplicationRoute = Ember.Route.extend({
+  model: function() {
+    return Ember.$.getJSON('data/base.json')
+                .then(function (hash) {
+                    console.log(hash)
+                    return hash;
+                });
+  },
+  afterModel: function(model) {
+    App.set('currentUser', model)
+  }
 });
 
 App.ApplicationController = Ember.Controller.extend({
