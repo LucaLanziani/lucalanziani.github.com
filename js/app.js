@@ -2,9 +2,9 @@ var attr = DS.attr;
 
 
 
-App = Ember.Application.create();
+var App = Ember.Application.create();
 // App.Store = DS.Store.extend();
-showdown = new Showdown.converter();
+var showdown = new Showdown.converter({ extensions: ['twitter'] });
 
   
 function loadTemplate(url, name, callback) {
