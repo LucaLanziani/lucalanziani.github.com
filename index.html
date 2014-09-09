@@ -29,35 +29,41 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-2 hidden-xs">
+      <div class="col-sm-2">
         <div class="row">
           <div class="col-sm-offset-1 col-sm-11">
-            <h4>Main</h4>
+
             <p>
               <nav role="main">
                 {{#link-to 'about'}} <i class="fa fa-hand-o-right"></i> About me{{/link-to}}
                 {{#link-to 'experiences'}}<i class="fa fa-hand-o-right"></i> Experiences{{/link-to}}
               </nav>
             </p>
-            <h4>Contacts</h4>
-            <p>
-              <nav role="contacts">
-                {{render "menu-socials" info.socials}}
-              </nav>
+            <div class="hidden-xs">
+              <h4>Contacts</h4>
+              <p>
+                <nav role="contacts">
+                  {{render "menu-socials" info.socials}}
+                </nav>
+              </p>
+            </div>
+            <p class="visible-xs">
+              {{render "socials" info.socials}}
             </p>
           </div>
         </div>
       </div>
       <div class="col-sm-9">
-        {{outlet}}
+          {{outlet}}
       </div>
     </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="about">
     {{ format-markdown description }}
-
-    {{render "skills" skills}}
+    <p>
+      {{render "skills" skills}}
+    </p>
   </script>
 
   <script type="text/x-handlebars" data-template-name="skills">
@@ -92,8 +98,8 @@
 
   <script type="text/x-handlebars" data-template-name="socials">
     {{#each this}}
-      <a class="btn btn-primary margins-2 ng-scope" target="_blank" {{bind-attr href="url"}}>
-        <i {{bind-attr class=":fa :fa-lg icon"}}> </i><small>{{name}}</small>
+      <a target="_blank" {{bind-attr href="url"}}>
+        <i {{bind-attr class=":fa icon"}}> </i> <small>{{name}}</small>
       </a>
     {{/each}}
   </script>
