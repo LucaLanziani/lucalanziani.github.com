@@ -58,8 +58,17 @@ body { overflow-y: scroll }
 nav>a {
   font-size: 1.2em;
   display: block;
+  white-space: nowrap;
 }
 
 .active {
   font-weight: 700;
+}
+
+img[alt=me] {
+  float: right;
+  border-radius: 6px;
+  margin: 4px;
+  max-width: 100%;
+  height: auto;
 }

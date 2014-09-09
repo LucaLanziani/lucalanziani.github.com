@@ -1,9 +1,4 @@
 {        
-    "role": "Software Engineer",
-        "company": "Smarkets",
-        "link": "https://www.smarkets.com",
-        "from": [2013, 11],
-        "to": [2014, 9],
     "_description": "data/description.md",
     "skills": [
         {
