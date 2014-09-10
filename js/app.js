@@ -33,8 +33,8 @@ var getParams = function (param) {
 };
 
 var getDescriptions = function (param) {
-    return function (experiences) {
-        var promises = experiences.map(getParams(param));
+    return function (experience) {
+        var promises = experience.map(getParams(param));
         return Ember.RSVP
         .all(promises)
         .then(function (result) {
@@ -50,8 +50,8 @@ var getMe = function () {
             });
 };
 
-var getExperiences = function () {
-    return Ember.$.getJSON('data/experiences.json')
+var getExperience = function () {
+    return Ember.$.getJSON('data/experience.json')
             .then(getDescriptions('description'))
             .then(function (result) {
                 return result;
@@ -78,7 +78,7 @@ Ember.Handlebars.helper('format-markdown', function (input) {
 App.Router.map(function () {
     // this.route('socials', { path: "/*" });
     this.route('me', { path: "/me"}, function () {
-        this.resource('experiences', { path: "/experiences"});  
+        this.resource('experience', { path: "/experience"});  
         this.resource('about', {path:"/about"});      
     });
 });
@@ -112,9 +112,9 @@ App.MeRoute = Ember.Route.extend({
     }
 });
 
-App.ExperiencesRoute = Ember.Route.extend({
+App.ExperienceRoute = Ember.Route.extend({
     model: function () {
-        return getExperiences();
+        return getExperience();
     }
 });
 
