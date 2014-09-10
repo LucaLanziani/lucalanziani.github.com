@@ -1,26 +1,8 @@
 var attr = DS.attr;
 
-
-
 var App = Ember.Application.create();
-// App.Store = DS.Store.extend();
 var showdown = new Showdown.converter({ extensions: ['twitter'] });
-
   
-function loadTemplate(url, name, callback) {
-  var contents = $.get(url, function(templateText) {
-    var compiledTemplate = Ember.Handlebars.compile(templateText);
-    if (name) {
-      Ember.TEMPLATES[name] = compiledTemplate
-    } else {
-      Ember.View.create({ template: compiledTemplate }).append();
-    }
-    if (callback) {
-      callback();
-    }
-  });
-}
-
 var getParams = function (param) {
     return function (element) {
         return Ember.$.ajax({
@@ -74,7 +56,6 @@ Ember.Handlebars.helper('format-markdown', function (input) {
     return new Handlebars.SafeString(showdown.makeHtml(input));
 });
 
-
 App.Router.map(function () {
     // this.route('socials', { path: "/*" });
     this.route('me', { path: "/me"}, function () {
@@ -117,26 +98,6 @@ App.ExperienceRoute = Ember.Route.extend({
         return getExperience();
     }
 });
-
-// App.SocialsRoute = Ember.Route.extend({
-//     model: function () {
-//         Ember.$.getJSON('data/base.json')
-//                 .then(function (base) {
-//                     console.log(base);
-//                     return base;
-//                 });
-//     },
-
-//     renderTemplate: function () {
-//         var controller = this.controllerFor('socials');
-
-//         this.render('socials', {
-//             outlet: 'socials',
-//             controller: controller
-//         })
-//     }
-// });
-
 
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
