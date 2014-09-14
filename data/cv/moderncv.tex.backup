@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.85]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Luca} % Your first name
+\familyname{Lanziani} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{83 Crampton Street}{London, UK SE17 3BU}
+% \mobile{(000) 111 1111}
+% \phone{(000) 111 1112}
+% \fax{(000) 111 1113}
+\github{github.com/Nss}
+\email{luca@lanziani.com}
+\homepage{www.lanziani.com}{lanziani.com} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \extrainfo{additional information}
+\photo[55pt][0.4pt]{pictures/profile} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+\section{Summary}
+
+I achieved my master degree in Computer Engineering in 2010, from these studies I learned how to approach
+problems academically but I never forget to use a pinch of creativity.
+I'm an open source addict, I love to share knowledge and I will never get tired of learning new things.
+
+\textit{Latest experience:} Betting platform (Python/Javascript), sync and backup multi-platform client (Python/Javascript),
+Web technologies (HTML5/Javascript), a plugin system and communication bus on Linux Embedded (C/Libdl/pubsub).
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\cventry{2013--Present}{Software Engineer}{\textsc{Smarkets}}{London}{}{Smarkets is a betting exchange for trading sports, politics and entertainment events. I'm currently working
+with Python/Flask and Javascript. This experience is giving me the possibility to work in a complete
+production environment, using various technologies such as Vagrant, Jenkins, Chef, RabbitMQ and
+practices as Scrum and CI.}
+
+%------------------------------------------------
+
+\cventry{2012--2013}{Software Engineer}{\textsc{FileRock}}{Rome}{}{FileRock is a secure, backup and synchronization service. I mainly worked on the client, a multi-platform
+software that encrypts and syncs data in the cloud completely written in python and on a responsive web
+interface using Angularjs and PhoneGap to bring it on mobile devices.}
+
+%------------------------------------------------
+
+
+\cventry{2011--2012}{Software Engineer / CoDreamer}{\textsc{Grapily}}{Rome}{}{Grapily was a web platform to generate HTML5 applications simply composing of a HTML5 interface and a
+services API. This experience gave me a good knowledge of HTML5, Javascript (Backbone, AngularJS),
+NodeJS, startups, team building.}
+
+\cventry{2011--2011}{Software Engineer}{\textsc{Roma Tre University}}{Rome}{}{I designed and developed a software framework in C language on a Linux embedded platform (FOX Board
+G20), for the SAETTA project. The framework takes care of dynamically-load software modules and
+manage the communication between them. From this experience I learned how to write multi-thread
+software and how to handle concurrency.}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2010}{Masters of Computer Engineering}{Roma Tre University}{Rome}{}{}  % Arguments not required can be left empty
+\cventry{2007}{Bachelor of Computer Engineering}{Roma Tre University}{Rome}{}{}
+
+% \section{Masters Thesis}
+% 
+% \cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
+% \cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+% \cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills (sorted by experience)}
+
+\cvitem{OS}{Linux, OSX, Windows}
+\cvitem{Languages}{Python, Javascript, C, Ruby, Java, Erlang, Ocaml, Pascal}
+\cvitem{Frameworks}{Nodejs, Angularjs, Flask, Backbonejs, RoR}
+\cvitem{Tools}{Chef, Vagrant, Jenkins, RabbitMQ}
+\cvitem{Databases}{PostgreSQL, MySQL}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Italian}{Mothertongue}{}
+\cvitemwithcomment{English}{Intermediate}{Professional working proficiency}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+% \clearpage
+% 
+% % \recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+% \date{\today} % Letter date
+% \opening{Hi,} % Opening greeting
+% \closing{Thanks,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+% 
+% \makelettertitle % Print letter title
+% 
+% sometime I feel like have to send a CV around looking for a new job, just because at the end of year I will be back in Italy.
+% 
+% A remote job can change that things helping me going on
+% % \lipsum[1-3] % Dummy text
+% 
+% \makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

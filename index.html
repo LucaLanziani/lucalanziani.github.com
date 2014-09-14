@@ -32,24 +32,8 @@
       <div class="col-sm-3">
         <div class="row">
           <div class="col-sm-offset-1 col-sm-11">
-
-            <p>
-              <nav role="main">
-                {{#link-to 'about'}} <i class="fa fa-hand-o-right"></i> About me{{/link-to}}
-                {{#link-to 'experience'}}<i class="fa fa-hand-o-right"></i> Experience{{/link-to}}
-              </nav>
-            </p>
-            <div class="hidden-xs">
-              <h4>Contacts</h4>
-              <p>
-                <nav role="contacts">
-                  {{render "menu-socials" info.socials}}
-                </nav>
-              </p>
-            </div>
-            <p class="visible-xs">
-              {{render "socials" info.socials}}
-            </p>
+            {{ partial "main_menu" }}
+            {{ partial "contacts" }}
           </div>
         </div>
       </div>
@@ -57,6 +41,39 @@
           {{outlet}}
       </div>
     </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="main_menu">
+    <div class="main_menu">
+      <div id="small_main" class="visible-xs">
+        {{ partial "menu" }}
+      </div>
+      <div class="hidden-xs">
+        {{ partial "menu" }}
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="menu">
+    <nav role="main">
+      {{#link-to 'about'}}<i class="fa fa-hand-o-right"></i> About me{{/link-to}}
+      {{#link-to 'experience'}}<i class="fa fa-hand-o-right"></i> Experience{{/link-to}}
+      <a target="_blank" href="data/cv/LucaLanziani.pdf"><i class="fa fa-file-pdf-o"></i> CV </a>
+    </nav>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="contacts">
+    <div class="hidden-xs">
+      <h4>Contacts</h4>
+      <p>
+        <nav role="contacts">
+          {{render "menu-socials" info.socials}}
+        </nav>
+      </p>
+    </div>
+    <p class="visible-xs">
+      {{render "socials" info.socials}}
+    </p>
   </script>
 
   <script type="text/x-handlebars" data-template-name="about">
