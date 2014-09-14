@@ -8,4 +8,4 @@ I got my **master degree in Computer Engineering in 2010**, from these studies I
 
 I always have really hard time leaving problems unsolved,I'm an Open source addict, I'm glad to share knowledge and I will never get tired of learning new things.
 
-**Last experience:** Betting platform as Software Engineer and DevOps (Python / Javascript), sync and backup multi-platform client (Python / wx), Web technologies (HTML5, javascript, css), plugin systems and communication bus on Linux Embedded (C / libdl / pubsub), 
+**Last experience:** Betting platform as Software Engineer and DevOps (**Python** / **Javascript**), sync and backup multi-platform client (**Python** / wx), Web Components Platform (**HTML5**, **Javascript**, css), plugin systems and communication bus on Linux Embedded (C / libdl / pubsub). 
