@@ -3,20 +3,28 @@
     "skills": [
         {
             "type": "Os",
-            "color":"info",
+            "color": "info",
             "list":["Linux","Osx","Windows"]
         }, {
             "type": "Languages",
-            "color":"default",
-            "list":["Python", "Javascript", "C", "Java", "Ruby", "Erlang", "Ocaml", "Pascal"]
+            "color": "default",
+            "list":["Python", "Javascript", "C", "Ruby"]
         }, {
             "type": "Frameworks",
-            "color":"success",
-            "list": ["Nodejs", "Angularjs", "Backbonejs", "RoR", "Struts2", "JPA"]
+            "color": "success",
+            "list": ["Nodejs", "Angularjs", "Backbonejs", "RoR"]
         }, {
             "type": "Versioning",
-            "color":"warning",
+            "color": "warning",
             "list": ["git", "svn"]
+        }, {
+            "type": "Tools",
+            "color": "primary",
+            "list": ["Vagrant", "Chef", "RabbitMQ", "Sentry"]
+        }, {
+            "type": "Databases",
+            "color": "danger",
+            "list": ["Postgres", "MySQL", "Redis", "Mongodb"]
         }
     ]
 }
