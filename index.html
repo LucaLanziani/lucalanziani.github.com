@@ -108,7 +108,7 @@
     {{#each this}}
       <a target="_blank" {{bind-attr href="url"}}>
         <i {{bind-attr class=":fa :fa-lg icon"}}> </i>
-          <small>{{name}}</small>
+          <small>{{ format-markdown name }}</small>
       </a>
     {{/each}}
   </script>
