@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-sm-offset-1 col-sm-11">
             {{ partial "main_menu" }}
-            {{ partial "contacts" }}
+            {{ partial "extra" }}
           </div>
         </div>
       </div>
@@ -62,9 +62,9 @@
     </nav>
   </script>
 
-  <script type="text/x-handlebars" data-template-name="contacts">
+  <script type="text/x-handlebars" data-template-name="extra">
     <div class="hidden-xs">
-      <h4>Contacts</h4>
+      <h4>More</h4>
       <p>
         <nav role="contacts">
           {{render "menu-socials" info.socials}}
