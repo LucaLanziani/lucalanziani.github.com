@@ -55,6 +55,7 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="menu">
+    <h4>Main</h4>
     <nav role="main">
       {{#link-to 'about'}}<i class="fa fa-hand-o-right"></i> About me{{/link-to}}
       {{#link-to 'experience'}}<i class="fa fa-hand-o-right"></i> Experience{{/link-to}}
@@ -65,11 +66,9 @@
   <script type="text/x-handlebars" data-template-name="extra">
     <div class="hidden-xs">
       <h4>More</h4>
-      <p>
-        <nav role="contacts">
-          {{render "menu-socials" info.socials}}
-        </nav>
-      </p>
+      <nav role="contacts">
+        {{render "menu-socials" info.socials}}
+      </nav>
     </div>
     <p class="visible-xs">
       {{render "socials" info.socials}}
