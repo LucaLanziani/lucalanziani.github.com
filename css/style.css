@@ -89,3 +89,15 @@ img[alt=me] {
 .page-header>h1 {
   margin-top: 0px;
 }
+
+@media (min-width: 768px) {
+
+.dl-horizontal dt {
+  width: auto;
+}
+
+.dl-horizontal dd {
+  margin-left: 100px;
+}
+
+}

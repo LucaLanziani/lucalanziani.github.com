@@ -6,25 +6,25 @@
             "color": "info",
             "list":["Linux","Osx","Windows"]
         }, {
-            "type": "Languages",
+            "type": "Language",
             "color": "default",
             "list":["Python", "Javascript", "C", "Ruby"]
         }, {
-            "type": "Frameworks",
+            "type": "Framework",
             "color": "success",
             "list": ["Nodejs", "Angularjs", "Backbonejs", "RoR"]
+        }, {
+            "type": "Tool",
+            "color": "primary",
+            "list": ["Vagrant", "Chef", "RabbitMQ", "Sentry"]
+        }, {
+            "type": "Database",
+            "color": "danger",
+            "list": ["Postgres", "MySQL", "Redis", "Mongodb"]
         }, {
             "type": "Versioning",
             "color": "warning",
             "list": ["git", "svn"]
-        }, {
-            "type": "Tools",
-            "color": "primary",
-            "list": ["Vagrant", "Chef", "RabbitMQ", "Sentry"]
-        }, {
-            "type": "Databases",
-            "color": "danger",
-            "list": ["Postgres", "MySQL", "Redis", "Mongodb"]
         }
     ]
 }

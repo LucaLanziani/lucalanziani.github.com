@@ -49,13 +49,13 @@
         {{ partial "menu" }}
       </div>
       <div class="hidden-xs">
+        <h4>Main</h4>
         {{ partial "menu" }}
       </div>
     </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="menu">
-    <h4>Main</h4>
     <nav role="main">
       {{#link-to 'about'}}<i class="fa fa-hand-o-right"></i> About me{{/link-to}}
       {{#link-to 'experience'}}<i class="fa fa-hand-o-right"></i> Experience{{/link-to}}
@@ -77,17 +77,24 @@
 
   <script type="text/x-handlebars" data-template-name="about">
     {{ format-markdown description }}
+    <br>
     <p>
       {{render "skills" skills}}
     </p>
   </script>
 
   <script type="text/x-handlebars" data-template-name="skills">
+    <h3>Skills</h3>
+    <dl class="dl-horizontal">
     {{#each skill in this}}
-      {{#each ele in skill.list}}
-        {{bs-label content=ele type=skill.color }}
-      {{/each}}
+      <dt>{{skill.type}}</dt>
+      <dd>
+        {{#each ele in skill.list}}
+          {{bs-label content=ele type=skill.color }}
+        {{/each}}
+      </dd>
     {{/each}}
+    </dl>
   </script>
 
   <script type="text/x-handlebars" data-template-name="experience">
@@ -138,7 +145,7 @@
 
       <img alt="me" src="img/minime.jpg"><p>If you are reading this your browser does not support JavaScript or you disabled it.</p>
 
-      <p>Therefore here are some links to help you find more information about me:</p>
+      <p>Therefore here are some links to help you find out more information about me:</p>
       
       <dl>
         <dt>Me</dt>
