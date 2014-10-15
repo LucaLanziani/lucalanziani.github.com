@@ -126,3 +126,14 @@ App.ApplicationController = Ember.Controller.extend({
     });
   }.observes('currentPath')
 });
+
+var mustache = function() {
+		$('img[alt=me]').each(function() { 
+      img=this;
+			var oldSrc = img.src
+			img.src='http://mustachify.me/?src='+encodeURIComponent(img.src)
+			setTimeout(function() {
+				img.src = oldSrc
+			}, 10000)
+		})
+}
