@@ -25,5 +25,8 @@
     "ember-addons.bs_for_ember": "~0.7.0",
     "momentjs": "~2.8.4",
     "normalize.css": "~3.0.2"
+  },
+  "resolutions": {
+    "handlebars": ">= 1.0.0 < 2.0.0"
   }
 }
