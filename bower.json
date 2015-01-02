@@ -1,0 +1,29 @@
+{
+  "name": "nss.github.com",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Nss/nss.github.com",
+  "authors": [
+    "Luca Lanziani <luca@lanziani.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "=1.7.0",
+    "bootstrap": "~3.2.0",
+    "ember-data": "1.0.0-beta.5",
+    "fontawesome": "~4.2.0",
+    "jquery": "~2.1.1",
+    "moment": "~2.8.3",
+    "showdown": "~0.3.1",
+    "ember-addons.bs_for_ember": "~0.7.0",
+    "momentjs": "~2.8.4",
+    "normalize.css": "~3.0.2"
+  }
+}
