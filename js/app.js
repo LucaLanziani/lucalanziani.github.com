@@ -126,9 +126,7 @@ var main = function (DS, Ember, Handlebars, Showdown, moment, gaq, window, jQuer
           gaq.push(['_trackPageview', page]);
         }
       });
-    /* jshint ignore:start */
     }.observes('currentPath')
-    /* jshint ignore:end */
   });
 
   var mustache = function () {
